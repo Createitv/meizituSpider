@@ -9,5 +9,6 @@ import scrapy
 class MeizituItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    href = scrapy.Field()
-    pages = scrapy.Field()
+    page = scrapy.Field()
+    img_url = scrapy.Field()
+    img_name = scrapy.Field()

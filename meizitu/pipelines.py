@@ -13,7 +13,7 @@ class CustomImagesPipeline(ImagesPipeline):
         # 从items中获取要下载图片的url, 根据url构造Requeset()对象, 并返回该对象
         # sort_title = item['sort_title']
         try:
-            image_url = item['href']
+            image_url = item['img_url']
             yield Request(image_url, meta={'item': item})
         except:
             image_url = 'https://www.qisuu.la/modules/article/images/nocover.jpg'
@@ -21,7 +21,7 @@ class CustomImagesPipeline(ImagesPipeline):
 
     def file_path(self, request, response=None, info=None):
         item = request.meta['item']
-        return '{}/{}.jpg'.format(item['page'], item['name'])
+        return '{}/{}/{}.jpg'.format(item['page'], item['name'],item['img_name'])
 
     def item_completed(self, results, item, info):
         print(results)
