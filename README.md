@@ -6,7 +6,7 @@
 
 #### ![其中一页](https://typora-1300715298.cos.ap-shanghai.myqcloud.com/uPic/image-20210711104317155.png)
 
-## Getting Started <a name = "getting_started"></a>
+
 
 ### 本机环境
 
@@ -17,20 +17,20 @@ Scrapy==2.5.0
 itemadapter==0.2.0
 ```
 
-### Installing
+### 环境准备
 
 
 ```
 pip3 install -r requirements.txt
 ```
 
-### Command
+### 如何使用
 
 ```
 scrapy crawl meizi
 ```
 
-### settings.py
+### settings.py参数修改
 
 ```
 CONCURRENT_REQUESTS = 10 # 默认10并发
